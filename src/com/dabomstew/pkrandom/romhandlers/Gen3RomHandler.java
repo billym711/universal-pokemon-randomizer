@@ -2807,8 +2807,8 @@ public class Gen3RomHandler extends AbstractGBRomHandler {
         List<Integer> fieldItems = new ArrayList<Integer>();
 
         for (int offset : itemOffs) {
-            int itemHere = readWord(offset);
-            if (Gen3Constants.allowedItems.isAllowed(itemHere) && !(Gen3Constants.allowedItems.isTM(itemHere))) {
+            int itemHere = 0;
+            if (!(Gen3Constants.allowedItems.isTM(itemHere))) {
                 fieldItems.add(itemHere);
             }
         }
