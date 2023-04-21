@@ -3070,7 +3070,7 @@ public class Gen3RomHandler extends AbstractGBRomHandler {
 
     private void randomizePCPotion() {
         if (romEntry.getValue("PCPotionOffset") != 0) {
-            writeWord(romEntry.getValue("PCPotionOffset"), this.getNonBadItems().randomNonTM(this.random));
+            writeWord(romEntry.getValue("PCPotionOffset"), 259);
         }
     }
 
