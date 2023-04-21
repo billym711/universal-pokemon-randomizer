@@ -2807,8 +2807,8 @@ public class Gen3RomHandler extends AbstractGBRomHandler {
         List<Integer> fieldItems = new ArrayList<Integer>();
 
         for (int offset : itemOffs) {
-            int itemHere = 0;
-            if (!(Gen3Constants.allowedItems.isTM(itemHere))) {
+            int itemHere = readWord(offset);
+            if (Gen3Constants.allowedItems.isAllowed(itemHere)) {
                 fieldItems.add(itemHere);
             }
         }
@@ -2825,9 +2825,12 @@ public class Gen3RomHandler extends AbstractGBRomHandler {
 
         for (int offset : itemOffs) {
             int itemHere = readWord(offset);
-            if (Gen3Constants.allowedItems.isAllowed(itemHere) && !(Gen3Constants.allowedItems.isTM(itemHere))) {
+            if (Gen3Constants.allowedItems.isAllowed(itemHere)) {
                 // Replace it
-                writeWord(offset, iterItems.next());
+                //339 = HM01, 340 = HM02, and so on
+                //key items start at 259
+                writeWord(offset, 260);
+                System.out.println("replace");
             }
         }
 

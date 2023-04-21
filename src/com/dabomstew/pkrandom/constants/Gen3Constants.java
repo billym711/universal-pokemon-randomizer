@@ -236,21 +236,24 @@ public class Gen3Constants {
     private static void setupAllowedItems() {
         allowedItems = new ItemList(376);
         // Key items (+1 unknown item)
-        allowedItems.banRange(259, 30);
-        allowedItems.banRange(349, 28);
+        //allowedItems.banRange(259, 30);
+        //allowedItems.banRange(349, 28);
         // Unknown blank items
-        allowedItems.banRange(52, 11);
+        /*allowedItems.banRange(52, 11);
         allowedItems.banRange(87, 6);
         allowedItems.banRange(99, 4);
         allowedItems.banRange(112, 9);
         allowedItems.banRange(176, 3);
         allowedItems.banRange(226, 28);
         allowedItems.banRange(347, 2);
-        allowedItems.banSingles(72, 82, 105, 267);
+        allowedItems.banSingles(72, 82, 105, 267);*/
         // HMs
-        allowedItems.banRange(339, 8);
+        //allowedItems.banRange(339, 8);
         // TMs
-        allowedItems.tmRange(289, 50);
+        //allowedItems.tmRange(289, 50);
+
+        //test
+        //allowedItems.banRange(1, 300);
 
         // non-bad items
         // ban specific pokemon hold items, berries, apricorns, mail

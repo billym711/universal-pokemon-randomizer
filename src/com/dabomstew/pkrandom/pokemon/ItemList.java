@@ -23,7 +23,7 @@ public class ItemList {
     }
 
     public boolean isAllowed(int index) {
-        if (index < 0 || index >= tms.length) {
+        if (index < 0 || index >= items.length) {
             return false;
         }
         return items[index];
