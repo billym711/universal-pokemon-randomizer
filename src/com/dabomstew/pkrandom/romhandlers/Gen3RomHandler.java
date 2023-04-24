@@ -1108,7 +1108,7 @@ public class Gen3RomHandler extends AbstractGBRomHandler {
             // US
             // order: 0, 1, 2
             writeWord(baseOffset, starter0);
-            writeWord(baseOffset + Gen3Constants.rseStarter2Offset, starter1);
+            writeWord(baseOffset + Gen3Constants.rseStarter2Offset, 15);
             writeWord(baseOffset + Gen3Constants.rseStarter3Offset, starter2);
 
         } else {
@@ -3071,6 +3071,9 @@ public class Gen3RomHandler extends AbstractGBRomHandler {
     private void randomizePCPotion() {
         if (romEntry.getValue("PCPotionOffset") != 0) {
             writeWord(romEntry.getValue("PCPotionOffset"), 259);
+            System.out.println(romEntry.getValue("PCPotionOffset"));
+            System.out.println(romEntry.entries);
+
         }
     }
 
